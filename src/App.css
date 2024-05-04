@@ -1,0 +1,51 @@
+.bi {
+    color: white;
+    width: 25px;
+
+}
+
+.numero {
+    color: white;
+}
+
+
+.titulo {
+    display: flex;
+    align-items: center;
+    width: 40px;
+
+    .imagenTitulo {
+        margin-right: 10px;
+    }
+
+    .escudo {
+        white-space: nowrap;
+        color: white;
+        width: 30px;
+        margin-right: 30px;
+    }
+
+}
+
+#counter {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+
+.bg-gray-800 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: rgb(36, 0, 0);
+    background: linear-gradient(90deg, rgba(36, 0, 0, 1) 0%, rgba(255, 0, 0, 1) 38%, rgba(36, 0, 0, 1) 100%);
+
+    .cartWidget {
+        margin-right: 20px;
+
+    }
+
+
+}
