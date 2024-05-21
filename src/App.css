@@ -49,3 +49,22 @@
 
 
 }
+
+
+.cardPadre {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: auto;
+    align-items: center;
+
+    .card{
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .card-body{
+        justify-content: center;
+    }
+
+}

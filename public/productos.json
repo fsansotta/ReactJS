@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "nombre": "Titular 2023",
+        "precio": 45000,
+        "imagen": "./assets/img/titular23.png"
+    },
+    {
+        "id": 2,
+        "nombre": "Suplente 2023",
+        "precio": 40000,
+        "imagen": "./assets/img/suplente23.png"
+    },
+    {
+        "id": 3,
+        "nombre": "Suplente 2021",
+        "precio": 30000,
+        "imagen": "./assets/img/suplente21.png"
+    },
+    {
+        "id": 4,
+        "nombre": "Titular 94",
+        "precio": 38000,
+        "imagen": "./assets/img/titular94.png"
+    },
+    {
+        "id": 5,
+        "nombre": "Suplente 2016",
+        "precio": 20000,
+        "imagen": "./assets/img/suplente16.png"
+    }
+]
