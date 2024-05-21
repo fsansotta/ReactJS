@@ -14,9 +14,7 @@ const Item = ({ producto }) => {
                     </div>
             </div>
 
-         {/*    <img src={producto.imagen}></img>
-            <h3> {producto.nombre} </h3>
-            <p> {producto.precio} </p> */}
+         
         </div>
     )
 }
