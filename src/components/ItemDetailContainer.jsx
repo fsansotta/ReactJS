@@ -1,16 +1,18 @@
 import React, {useEffect, useState} from 'react'
 import ItemDetail from './ItemDetail'
 import Cargando from './Cargando'
+import { useParams } from 'react-router-dom'
 
-const ItemDetailContainer = ({id}) => {
-    const [producto, setProducto] = useState([null])
+const ItemDetailContainer = () => {
+    const [producto, setProducto] = useState(null)
+    const {productoId} = useParams()
 
     useEffect(() => {
       const fecthData = async () => {
         try {
-          const response = await fetch("./productos.json")
+          const response = await fetch("../productos.json")
           const data = await response.json()
-          const producto = data.find((producto) => producto.id === id)
+          const producto = data.find((producto) => producto.id === Number(productoId))
           setProducto(producto)
 
         } catch (error) {
@@ -20,7 +22,7 @@ const ItemDetailContainer = ({id}) => {
       }
     fecthData()
 
-    }, [id])
+    }, [productoId])
 
   return (
     <div>{

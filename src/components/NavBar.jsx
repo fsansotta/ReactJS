@@ -1,6 +1,7 @@
 import React from 'react'
 import CartWidget from './CartWidget'
 import escudo from '../assets/imagen/indepc.png'
+import { Link } from 'react-router-dom'
 
 
 
@@ -38,10 +39,27 @@ const NavBar = () => {
             </div>
             <div class="hidden sm:ml-6 sm:block">
               <div class="flex space-x-4">
-                <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Inicio</a>
-                <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Camisetas</a>
+              <Link to={`/`}>  <li>Inicio</li> </Link>
+                <Link to={`/categoria/camiseta`}>  <li>Camisetas</li> </Link>
+                <Link to={`/categoria/pantalon`}>  <li>Pantalones</li> </Link>
+                <Link to={`/categoria/otros`}>  <li>Otros productos</li> </Link>
+                <Link to={`/contacto`}>  <li>Contacto</li> </Link>
+
                 <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Pantalones</a>
                 <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Otros productos</a>
+
+
+
+
+             {/*    <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Inicio</a>
+                <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Camisetas</a>
+                <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Pantalones</a>
+                <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Otros productos</a> */}
+
+
+
+
+
               </div>
             </div>
           </div>

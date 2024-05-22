@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from "react-router-dom"
 
 const Item = ({ producto }) => {
     return (
@@ -10,7 +11,7 @@ const Item = ({ producto }) => {
                     <div class="card-body">
                         <h5 class="card-title">{producto.nombre}</h5>
                         <p class="card-text">{producto.precio}</p>
-                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                       <Link to={`/producto/${producto.id}`}> <button class="btn btn-primary">Ver producto</button> </Link>
                     </div>
             </div>
 
@@ -20,3 +21,5 @@ const Item = ({ producto }) => {
 }
 
 export default Item
+
+
