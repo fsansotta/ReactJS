@@ -51,20 +51,149 @@
 }
 
 
-.cardPadre {
+.item-detail {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: auto;
     align-items: center;
-
-    .card{
-        justify-content: center;
-        margin-top: 10px;
-    }
-
-    .card-body{
-        justify-content: center;
-    }
-
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+.item-image {
+    width: 200px;
+    height: auto;
+    border-radius: 4px;
+    margin-right: 16px;
+}
+
+.item-info {
+    flex: 1;
+}
+
+.item-name {
+    font-size: 1.5rem;
+    margin: 0 0 8px;
+}
+
+.item-description {
+    margin: 0 0 16px;
+}
+
+.item-price {
+    font-weight: bold;
+}
+
+.add-to-cart {
+    background-color: #ba0101;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    background-color: #e10404;
+}
+
+
+.item-counter {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 120px;
+}
+
+.counter-display {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.counter-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.counter-button {
+    background-color: #ba0101;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.counter-button:hover {
+    background-color: #e10404;
+}
+
+
+.contenedorItem {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+
+.card {
+    background-color: #e900007e;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card img {
+    max-width: 400px;
+    max-height: 300px;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .card-body {
+    padding: 16px;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+  }
+  
+  .card-text {
+    margin-bottom: 16px;
+  }
+  
+  .card .btn
+  {
+  background-color: #e10404;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  }
+  
+  .card .btn
+  {
+  background-color: #cc0000;
+  }

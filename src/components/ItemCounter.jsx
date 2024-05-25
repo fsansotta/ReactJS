@@ -16,10 +16,10 @@ const ItemCounter = ({stock}) => {
   };
 
   return (
-    <div>
-      <h1>CANTIDAD {count}</h1>      
-      <button type="button" class="btn btn-success" onClick={increment}>+</button>
-      <button type="button" class="btn btn-success" onClick={decrement}>-</button>
+    <div className="item-counter">
+      <div className="counter-display">{count}</div>
+            <button className="counter-button" onClick={decrement}>-</button>
+        <button className="counter-button" onClick={increment}>+</button>
     </div>
   );
   

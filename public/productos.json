@@ -4,7 +4,7 @@
         "nombre": "Titular 2023",
         "precio": 45000,
         "categoria": "camiseta",
-        "imagen": "./assets/img/titular23.png",
+        "imagen": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_480,h_480/global/686313/01/fnd/ARG/fmt/png",
         "stock": 20
 
     },
@@ -13,7 +13,7 @@
         "nombre": "Suplente 2023",
         "precio": 40000,
         "categoria": "camiseta",
-        "imagen": "./assets/img/suplente23.png",
+        "imagen": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_480,h_480/global/771554/01/fnd/ARG/fmt/png",
         "stock": 12
     },
     {
@@ -21,7 +21,7 @@
         "nombre": "Suplente 2021",
         "precio": 30000,
         "categoria": "camiseta",
-        "imagen": "./assets/img/suplente21.png",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_774681-MLA54978532208_042023-F.webp",
         "stock": 9
     },
     {
@@ -29,7 +29,7 @@
         "nombre": "Titular 94",
         "precio": 38000,
         "categoria": "camiseta",
-        "imagen": "./assets/img/titular94.png",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_620657-MLA73280488731_122023-O.webp",
         "stock": 6
     },
     {
@@ -37,7 +37,7 @@
         "nombre": "Suplente 2016",
         "precio": 20000,
         "categoria": "camiseta",
-        "imagen": "./assets/img/suplente16.png",
+        "imagen": "https://www.locoxelrojo.com/independiente/wp-content/uploads/2016/01/AZUL-CAMISETA.jpg",
         "stock": 17
     },
     {
@@ -45,7 +45,7 @@
         "nombre": "Pantalon 2024",
         "precio": 10000,
         "categoria": "pantalon",
-        "imagen": "./assets/img/pantalon1.jpg",
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_970988-MLA71570223011_092023-O.webp",
         "stock": 11
     },
     {
@@ -53,7 +53,33 @@
         "nombre": "Pelota de fútbol",
         "precio": 6000,
         "categoria": "otros",
-        "imagen": "./assets/img/pelota1.png",
+        "imagen": "https://sporting.vtexassets.com/arquivos/ids/795848-1200-1200?v=638199251709870000&width=1200&height=1200&aspect=true",
         "stock": 3
+    },
+    {
+        "id": 8,
+        "nombre": "Short 2024",
+        "precio": 20000,
+        "categoria": "pantalon",
+        "imagen": "https://www.opensports.com.ar/media/catalog/product/cache/4769e4d9f3516e60f2b4303f8e5014a8/6/0/60652806_0_6.jpg",
+        "stock": 11
+    },
+    {
+        "id": 9,
+        "nombre": "Camiseta 2017",
+        "precio": 20000,
+        "categoria": "camiseta",
+        "imagen": "https://www.clarin.com/2017/12/14/SkgD4defz_720x0__1.jpg",
+        "stock": 20
+    },
+    {
+        "id":10,
+        "nombre": "Reloj",
+        "precio": 25000,
+        "categoria": "otros",
+        "imagen": "https://dcdn.mitiendanube.com/stores/154/782/products/reloj-independiente-de-avellaneda-nuevo-11-29e9821d7cd2161f3916239371253074-1024-1024.jpg",
+        "stock": 50
     }
+
+
 ]
