@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
+import { useCartContext } from '../context/cartContext';
 
-const ItemCounter = ({stock}) => {
+const ItemCounter = ({stock, product}) => {
   const [count, setCount] = useState(0);
+  const {agregarCarrito} = useCartContext()
 
   const increment = () => {
     if(count < stock){
