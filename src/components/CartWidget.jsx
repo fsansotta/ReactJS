@@ -6,11 +6,6 @@ import { Link } from 'react-router-dom'
 const CartWidget = () => {
     const {items} = useContext(CartContext)
 
-   /*  if (items.length <=0) {
-        return(
-            <div></div>
-        )
-    } */
 
     return (
         <Link to='cart'>

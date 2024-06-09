@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { CartContext } from './cartContext'
+import Swal from 'sweetalert2'
 
 function CartProvider({ children }) {
     const [items, setItems] = useState([])
@@ -7,12 +8,21 @@ function CartProvider({ children }) {
     const agregarCarrito = (producto) => {
         const retorno = items.some(item => item.id === producto.id)
 
-        if(retorno) return alert('El producto ya fue agregado') /* VER SWEET ALERT Y PONER ALGO COPADO */
+        Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "El producto ha sido agregado correctamente",
+            showConfirmButton: false,
+            timer: 1000
+        });
 
-        setItems([... items, producto])
+        setItems([...items, producto])
     }
+
+    const vaciarCarrito = () => { setItems([]) }
+
     return (
-        <CartContext.Provider value={{items, setItems, agregarCarrito}}>
+        <CartContext.Provider value={{ items, setItems, agregarCarrito, vaciarCarrito }}>
             {children}
         </CartContext.Provider>
     )

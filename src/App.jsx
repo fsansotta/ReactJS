@@ -13,6 +13,7 @@ import { CartContext } from './context/cartContext'
 import CartProvider from './context/CartProvider'
 import Cart from './components/Cart'
 
+
 function App() {
 
   return (
@@ -25,6 +26,8 @@ function App() {
           <Routes>
             <Route path="/" element={<ItemListContainer props={'a la tienda del Rey de Copas'} />} />
             <Route path="/producto/:productoId" element={<ItemDetailContainer />} />
+      
+
             <Route path="/categoria/:categoria" element={<ItemListContainer props={'a la tienda del Rey de Copas'} />} />
             <Route path="/contacto" element={<AboutUs />} />
             <Route path="/cart" element={<Cart/>} />
