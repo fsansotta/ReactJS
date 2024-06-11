@@ -60,6 +60,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+
 .item-image {
     width: 200px;
     height: auto;
@@ -196,7 +197,7 @@
     background-color: #cc0000;
 }
 
-.carouselContainer{
+/* .carouselContainer{
     display: flex;
     justify-content: center;
     margin-top: 50px;
@@ -206,4 +207,52 @@
 .carouselExampleRide {
     width: 100%;
     max-width: 800px;
-} 
+}  */
+
+
+/* .productosCart {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ 
+
+    .imgCart {
+        width: 200px;
+        height: auto;
+        border-radius: 4px;
+        margin-right: 16px;
+       
+    }
+} */
+
+.productosCart {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    border-radius: 1rem;
+    border-color: #666;
+  }
+  
+  .productosCart img {
+    width: 100px; /* Ajusta el tamaño de acuerdo a tus preferencias */
+    height: auto;
+    margin-right: 15px;
+    border-radius: 5px; /* Agrega bordes redondeados */
+    align-items: center;
+  }
+  
+  .productosCart .nombre {
+    font-weight: bold;
+  }
+  
+  .productosCart .cantidad {
+    color: #666; /* Color del texto de la cantidad */
+    font-size: 0.9em; /* Tamaño del texto de la cantidad */
+  }
+
+
+  

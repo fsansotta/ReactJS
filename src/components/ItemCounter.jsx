@@ -17,6 +17,9 @@ const ItemCounter = ({stock, product}) => {
     }
   };
 
+
+  
+
   return (
     <div className="item-counter">
       <div className="counter-display">{count}</div>

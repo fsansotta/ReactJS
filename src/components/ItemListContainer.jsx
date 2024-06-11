@@ -5,11 +5,15 @@ import Item from './Item'
 import { useParams } from 'react-router-dom'
 import { CartContext } from '../context/cartContext'
 
+
 const ItemListContainer = ({ props }) => {
 
   const [productos, setProductos] = useState([])
   const {categoria} = useParams()
   const items = useContext(CartContext)
+
+
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -30,6 +34,10 @@ const ItemListContainer = ({ props }) => {
     fetchData()
   }, [categoria])
 
+
+
+
+  
   return (
     <div>
       <p>BIENVENIDO {props}</p>
