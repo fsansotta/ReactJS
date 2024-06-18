@@ -13,6 +13,7 @@ import { CartContext } from './context/cartContext'
 import CartProvider from './context/CartProvider'
 import Cart from './components/Cart'
 import { getFirestore, collection, getDocs } from "firebase/firestore"
+import CheckOutContainer from './components/CheckOutContainer'
 
 function App() {
 
@@ -40,6 +41,7 @@ function App() {
             <Route path="/categoria/:categoria" element={<ItemListContainer props={'a la tienda del Rey de Copas'} />} />
             <Route path="/contacto" element={<AboutUs />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/checkout" element={<CheckOutContainer/>} />
           </Routes>
         </BrowserRouter >
       </CartProvider>

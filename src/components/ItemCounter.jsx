@@ -17,6 +17,11 @@ const ItemCounter = ({stock, product}) => {
     }
   };
 
+  const handleClick = () => {
+    agregarCarrito(product, count)
+  }
+
+
 
   
 
@@ -25,6 +30,7 @@ const ItemCounter = ({stock, product}) => {
       <div className="counter-display">{count}</div>
             <button className="counter-button" onClick={decrement}>-</button>
         <button className="counter-button" onClick={increment}>+</button>
+        <button className='add-to-cart' onClick={handleClick} >Agregar al carrito</button>
     </div>
   );
   
