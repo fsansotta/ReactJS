@@ -3,29 +3,42 @@ import CheckOut from './CheckOut'
 import { collection, getFirestore, addDoc } from 'firebase/firestore'
 import { useNavigate } from 'react-router-dom'
 import { CartContext } from '../context/cartContext'
-
+import Swal from 'sweetalert2'
 
 
 
 const CheckOutContainer = () => {
 
     const navigate = useNavigate()
-    const { cart, totalPricerCart, clearCart } = useContext(CartContext)
+    const { items, calcularTotalCompra, vaciarCarrito } = useContext(CartContext)
 
     const ordenCompleta = async (comprador) => {
+        
 
         const order = {
             comprador,
-            items: cart,
-            total: totalPricerCart,
+            items: items,
+            total: calcularTotalCompra(),
         }
+
+        console.log(order)
    
 
     const db = getFirestore()
     const docRef = collection(db, "orders")
     await addDoc(docRef, order)
-    clearCart()
-    navigate("/orders")
+    Swal.fire({
+        title: "Su compra fue realizada con éxito",
+        text: "En breve nos contactaremos con usted",
+        imageUrl: "https://soydelrojo.com/wp-content/uploads/2022/02/n-1.jpg",
+        imageWidth: 400,
+        imageHeight: 200,
+        imageAlt: "Hinchada Independiente"
+      });
+
+
+    vaciarCarrito()
+    navigate("/")
     }
 
 

@@ -1,19 +1,19 @@
 import React, { useState } from 'react'
 import { useCartContext } from '../context/cartContext';
 
-const ItemCounter = ({stock, product}) => {
+const ItemCounter = ({ stock, product }) => {
   const [count, setCount] = useState(1);
-  const {agregarCarrito} = useCartContext()
+  const { agregarCarrito } = useCartContext()
 
   const increment = () => {
-    if(count < stock){
-    setCount(prevCount => prevCount + 1);
+    if (count < stock) {
+      setCount(prevCount => prevCount + 1);
     }
   };
 
   const decrement = () => {
-    if(count > 1){
-    setCount(prevCount => prevCount - 1);
+    if (count > 1) {
+      setCount(prevCount => prevCount - 1);
     }
   };
 
@@ -23,17 +23,19 @@ const ItemCounter = ({stock, product}) => {
 
 
 
-  
+
 
   return (
-    <div className="item-counter">
-      <div className="counter-display">{count}</div>
-            <button className="counter-button" onClick={decrement}>-</button>
+    <>
+      <div className="item-counter">
+        <div className="counter-display">{count}</div>
+        <button className="counter-button" onClick={decrement}>-</button>
         <button className="counter-button" onClick={increment}>+</button>
-        <button className='add-to-cart' onClick={handleClick} >Agregar al carrito</button>
-    </div>
+      </div>
+      <button className='add-to-cart' onClick={handleClick} >Agregar al carrito</button>
+    </>
   );
-  
+
 }
 
 export default ItemCounter

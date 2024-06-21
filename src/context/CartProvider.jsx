@@ -1,9 +1,11 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { CartContext } from './cartContext'
 import Swal from 'sweetalert2'
 
 function CartProvider({ children }) {
     const [items, setItems] = useState([])
+  
+    
 
     const agregarCarrito = (producto, cantidad) => {
         const existe = items.find(item => item.id === producto.id);
@@ -26,7 +28,11 @@ function CartProvider({ children }) {
             showConfirmButton: false,
             timer: 1000
         });
+
+        
     }
+
+   
 
     function eliminarProducto(id) {
         
@@ -36,8 +42,14 @@ function CartProvider({ children }) {
 
     const vaciarCarrito = () => { setItems([]) }
 
+    const calcularTotalCompra = () => {
+        return items.reduce((total, item) => {
+          return total + (item.precio * item.cantidad);
+        }, 0);
+      };
+
     return (
-        <CartContext.Provider value={{ items, setItems, agregarCarrito, vaciarCarrito, eliminarProducto, }}>
+        <CartContext.Provider value={{ items, setItems, agregarCarrito, vaciarCarrito, eliminarProducto, calcularTotalCompra }}>
             {children}
         </CartContext.Provider>
     )

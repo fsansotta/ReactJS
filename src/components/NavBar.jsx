@@ -41,7 +41,6 @@ const NavBar = () => {
                 <Link to={`/categoria/camiseta`}>  <li class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" style={{ listStyle: "none" }}>Camisetas</li> </Link>
                 <Link to={`/categoria/pantalon`}>  <li class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" style={{ listStyle: "none" }}>Pantalones</li> </Link>
                 <Link to={`/categoria/otros`}>  <li class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" style={{ listStyle: "none" }}>Otros productos</li> </Link>
-                <Link to={`/contacto`}>  <li class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" style={{ listStyle: "none" }}>Contacto</li> </Link>
               </div>
             </div>
           </div>
