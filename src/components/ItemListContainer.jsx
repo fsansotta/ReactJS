@@ -4,7 +4,7 @@ import ItemList from "./ItemList"
 import Item from './Item'
 import { useParams } from 'react-router-dom'
 import { CartContext } from '../context/cartContext'
-
+import { getFirestore, collection, getDocs } from "firebase/firestore"
 
 const ItemListContainer = ({ props }) => {
 
@@ -16,22 +16,23 @@ const ItemListContainer = ({ props }) => {
 
 
   useEffect(() => {
-    const fetchData = async () => {
+    (async () => {
       try {
-        const response = await fetch ("../productos.json")
-        const data = await response.json ()   
-        if(categoria){
-          const productosFiltrados = data.filter((producto) => producto.categoria === categoria)
-          setProductos(productosFiltrados)
-        } else{
-          setProductos(data)
+        const db = getFirestore();
+        const docsRef = collection(db, "productos");
+        const querySnapshot = await getDocs(docsRef);
+        let todos = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+
+        if (categoria) {
+          const productosFiltrados = todos.filter((producto) => producto.categoria === categoria);
+          setProductos(productosFiltrados);
+        } else {
+          setProductos(todos);
         }
+      } catch (error) {
+        console.error("El producto no se encuentra disponible en este momento, inténtelo nuevamente o más tarde", error);
       }
-      catch(error) {
-        console.log("El producto no se encuentra disponible en este momento, inténtelo nuevamente o más tarde", error)
-      }
-    }
-    fetchData()
+    })();
   }, [categoria])
 
 

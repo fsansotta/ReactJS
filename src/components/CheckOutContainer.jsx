@@ -20,8 +20,6 @@ const CheckOutContainer = () => {
             items: items,
             total: calcularTotalCompra(),
         }
-
-        console.log(order)
    
 
     const db = getFirestore()
