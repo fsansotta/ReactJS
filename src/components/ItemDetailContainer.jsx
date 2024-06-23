@@ -2,25 +2,25 @@ import React, {useEffect, useState} from 'react'
 import ItemDetail from './ItemDetail'
 import Cargando from './Cargando'
 import { useParams } from 'react-router-dom'
-
+import { getFirestore, collection, getDocs } from "firebase/firestore"
 const ItemDetailContainer = () => {
     const [producto, setProducto] = useState(null)
     const {productoId} = useParams()
 
     useEffect(() => {
-      const fecthData = async () => {
+      (async () => {
         try {
-          const response = await fetch("../productos.json")
-          const data = await response.json()
-          const producto = data.find((producto) => producto.id === Number(productoId))
-          setProducto(producto)
-
+          const db = getFirestore();
+          const docsRef = collection(db, "productos");
+          const querySnapshot = await getDocs(docsRef);
+          const productos = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+          const productoFiltrado = productos.find((producto) => producto.id === Number(productoId))
+          setProducto(productoFiltrado)
         } catch (error) {
-          console.log("El producto no se encuentra disponible en este momento, inténtelo nuevamente o más tarde" + error);
-
+          console.error("El producto no se encuentra disponible en este momento, inténtelo nuevamente o más tarde", error);
         }
-      }
-    fecthData()
+      })()
+  
 
     }, [productoId])
 
