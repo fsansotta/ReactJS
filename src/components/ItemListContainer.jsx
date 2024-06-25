@@ -41,7 +41,7 @@ const ItemListContainer = ({ props }) => {
   
   return (
     <div>
-      <p>BIENVENIDO {props}</p>
+      <p className='greeting'> {props}</p>
     {productos.length == 0 ? <Cargando/> : <ItemList productos={productos}/>}
     </div>
   )
